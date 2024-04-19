@@ -10,5 +10,17 @@
         align-items: center;
         justify-content: space-between;
         @include container;
+
+        .menu-items {
+
+            ul {
+                display: flex;
+                gap: 35px;
+
+                li {
+                    font-size: 15px;
+                }
+            }
+        }
     }
 }
