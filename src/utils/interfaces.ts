@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 interface Ititle {
   title: string;
 }
@@ -7,4 +9,8 @@ interface InavList {
   scrollSection?: string;
 }
 
-export type { Ititle, InavList };
+interface Ichildren{
+    children : ReactNode
+}
+
+export type { Ititle, InavList, Ichildren };
