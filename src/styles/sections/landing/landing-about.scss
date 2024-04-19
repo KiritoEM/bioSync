@@ -1,9 +1,14 @@
-#landing__about {
+.landing__about {
     width: 100%;
     overflow: hidden;
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
+    gap: 8vh;
     align-items: center;
     @include container;
+
+    .about-header h2 {
+        color: $green02;
+    }
 }

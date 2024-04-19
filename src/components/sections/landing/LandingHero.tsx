@@ -1,6 +1,6 @@
 const LandingHero = (): JSX.Element => {
   return (
-    <section id="landing__hero">
+    <section className="landing__hero">
       <div className="hero-container">
         <h1>
           Join the Green <br /> Revolution with BioSync

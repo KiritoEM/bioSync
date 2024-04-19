@@ -24,7 +24,7 @@ const aboutCardData: IaboutCardData[] = [
     text: "Our Artificial Intelligence will anayse and check if your product is bio",
   },
   {
-    icon: "/about-icon.3.png",
+    icon: "/about-icon3.png",
     subtitle: "Recommandation",
     text: "Recommandation with Artificial Intelligence for product bio",
   },
