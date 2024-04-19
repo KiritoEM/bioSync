@@ -8,3 +8,10 @@ $green02 : #121212;
     padding: 0;
     box-sizing: border-box;
 }
+
+//mixins =>
+//container
+@mixin container {
+    padding-left: 8%;
+    padding-right: 8%;
+}

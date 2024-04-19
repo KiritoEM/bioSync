@@ -2,4 +2,9 @@ interface Ititle {
   title: string;
 }
 
-export type { Ititle };
+interface InavList {
+  label: string;
+  scrollSection?: string;
+}
+
+export type { Ititle, InavList };
