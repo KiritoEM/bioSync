@@ -1,0 +1,9 @@
+#landing__about {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include container;
+}

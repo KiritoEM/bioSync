@@ -9,8 +9,14 @@ interface InavList {
   scrollSection?: string;
 }
 
-interface Ichildren{
-    children : ReactNode
+interface Ichildren {
+  children: ReactNode;
 }
 
-export type { Ititle, InavList, Ichildren };
+interface IaboutCardData {
+  icon: string;
+  subtitle: string;
+  text: string;
+}
+
+export type { Ititle, InavList, Ichildren, IaboutCardData };

@@ -1,5 +1,6 @@
 import LandingLayout from "@/components/Layouts/LandingLayout";
 import MetaTitle from "@/components/meta/MetaTitle";
+import LandingAbout from "@/components/sections/landing/LandingAbout";
 import LandingHero from "@/components/sections/landing/LandingHero";
 import React, { Fragment } from "react";
 
@@ -10,6 +11,7 @@ const landing = (): JSX.Element => {
       <section id="landing">
         <LandingLayout>
           <LandingHero />
+          <LandingAbout />
         </LandingLayout>
       </section>
     </Fragment>
