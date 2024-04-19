@@ -15,6 +15,9 @@ const LandingNavbar = (): JSX.Element => {
               ))}
             </ul>
           </div>
+          <div className="button">
+            <button className="btn">Get started</button>
+          </div>
         </div>
       </nav>
     </Fragment>

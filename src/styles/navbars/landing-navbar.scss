@@ -1,8 +1,11 @@
 #landing-navbar {
     width: 100%;
     overflow: hidden;
-    height: 4rem;
+    height: 4.5rem;
     position: absolute;
+    background-color: $green01;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     &__container {
         height: 100%;
@@ -19,7 +22,20 @@
 
                 li {
                     font-size: 15px;
+                    color: $green02;
                 }
+            }
+        }
+
+        .button {
+            height: 100%;
+
+            .btn {
+                padding: 0 16px;
+                height: 100%;
+                background-color: $light;
+                border-radius: $radius01;
+                font-weight: 500;
             }
         }
     }
