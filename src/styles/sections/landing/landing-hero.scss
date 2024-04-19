@@ -1,0 +1,69 @@
+#landing__hero {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 4.5rem;
+    background-color: $green01;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 16vh;
+
+        h1 {
+            font-size: 46px;
+            font-weight: 700;
+            color: $green02;
+            text-align: center;
+        }
+
+        p {
+            color: $green03;
+            width: 482px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 24px;
+
+            .btn {
+                padding: 10px 16px;
+                font-weight: 600;
+                font-size: 14px !important;
+                color: $green02;
+
+                &:first-child {
+                    background-color: $light;
+                    border-radius: $radius01;
+                }
+
+                &:last-child {
+                    border: 1px solid $green02;
+                    border-radius: $radius01;
+                    display: flex;
+                    gap: 8px;
+                }
+
+                img {
+                    width: 19px;
+                }
+            }
+        }
+    }
+
+    .footer-img {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
