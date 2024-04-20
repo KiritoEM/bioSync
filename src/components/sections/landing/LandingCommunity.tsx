@@ -10,7 +10,12 @@ const LandingCommunity = (): JSX.Element => {
         <div className="col-6">
           <div className="community-subscribe">
             <h5>Subscribe to the newsletter</h5>
-            <div className="input"></div>
+            <div className="input">
+              <input type="text" placeholder="Enter your email" />
+              <button className="btn">
+                Subscribe <img src="/arrow-right2.png" alt="" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,24 +1,57 @@
 .landing__community {
     margin-top: 13vh;
     background-image: url("/community-bg.png");
-    padding: 30vh;
+    padding: 30vh 14%;
     background-size: contain;
-    @include container;
 
-    .community-header h1 {
-        font-weight: 600;
-        color: $green02;
+    .community-header {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-weight: 600;
+            color: $green02;
+        }
     }
 
     .community-subscribe {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        justify-content: center;
+        gap: 15px;
         width: 100%;
 
         h5 {
             color: $green02;
             font-weight: 600;
+        }
+
+        .input {
+            width: 100%;
+            position: relative;
+
+            input {
+                width: 100%;
+                border: none;
+                border-radius: $radius01;
+                padding: 11px 15px;
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 4px 14px;
+                background-color: $green02;
+                position: absolute;
+                font-size: 14px;
+                color: $light;
+                border-radius: $radius01;
+                margin-top: 5px;
+                margin-left: -135px;
+
+                img {
+                    width: 17px;
+                }
+            }
         }
     }
 }
