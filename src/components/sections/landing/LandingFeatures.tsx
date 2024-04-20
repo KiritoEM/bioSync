@@ -4,8 +4,8 @@ import { featuresCardData } from "@/helpers/constants";
 const LandingFeatures = (): JSX.Element => {
   return (
     <section className="landing-features">
-      <div className="row">
-        <div className="col-6">
+      <div className="row gy-5 gy-md-2">
+        <div className="col-md-6">
           <div className="features-content">
             <div className="title">
               <h2>Discover our features</h2>
@@ -24,7 +24,7 @@ const LandingFeatures = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-md-6">
           <div className="features-image">
             <img src="/features_img.png" alt="" />
           </div>

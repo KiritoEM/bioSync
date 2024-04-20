@@ -28,6 +28,16 @@
 
         img {
             object-fit: cover;
+
+            @include screen(small) {
+                width: 100%;
+            }
+
+            img {
+                @include screen(small) {
+                    width: 100%;
+                }
+            }
         }
     }
 }

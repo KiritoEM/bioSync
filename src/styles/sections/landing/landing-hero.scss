@@ -41,7 +41,7 @@
             }
 
             @include screen(small) {
-                font-size: 33px;
+                font-size: 31px;
             }
         }
 
@@ -58,6 +58,10 @@
         .buttons {
             display: flex;
             gap: 24px;
+
+            @include screen(small) {
+                gap: 15px;
+            }
 
             .btn {
                 padding: 10px 16px;

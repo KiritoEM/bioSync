@@ -7,10 +7,22 @@
     background-size: 100% 100%;
     z-index: 500;
 
+    @include screen(small) {
+        background-size: cover;
+        padding: 10rem 0;
+        @include container;
+    }
+
+
+
     .community-header {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include screen(small) {
+            justify-content: flex-start;
+        }
 
         h1 {
             font-weight: 600;
@@ -56,6 +68,10 @@
                 border-radius: $radius01;
                 margin-top: 5px;
                 margin-left: -135px;
+
+                @include screen(small) {
+                    font-size: 14px;
+                }
 
                 img {
                     width: 17px;
