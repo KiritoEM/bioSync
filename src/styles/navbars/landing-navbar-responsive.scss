@@ -3,13 +3,13 @@
     z-index: 1000;
     background-color: $light;
     width: 100%;
-    padding: 2.45rem 0;
+    overflow: hidden;
 
     ul {
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 33px;
+        gap: 28px;
         padding-left: 0;
 
         li {
@@ -38,7 +38,17 @@
             background-color: $green01;
             border-radius: $radius01;
             font-weight: 500;
-            margin-top: 12px;
+            margin-top: 4px;
         }
     }
+}
+
+.open-landing-nav {
+    padding: 2.45rem 0;
+    height: max-content;
+}
+
+.close-landing-nav {
+    padding: 0;
+    height: 0;
 }
