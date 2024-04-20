@@ -33,7 +33,7 @@ const aboutCardData: ILandingCard[] = [
 const featuresCardData: ILandingCard[] = [
   {
     icon: "/send-icon.png",
-    subtitle: "Artificial intelligence verificationion",
+    subtitle: "Artificial intelligence verification",
     text: "Add your product to our app and we will check if it is bio with our Artificial Intelligence",
   },
   {

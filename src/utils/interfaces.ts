@@ -17,7 +17,7 @@ interface ILandingCard {
   icon: string;
   subtitle: string;
   text: string;
-  icon_width?: number;
+  icon_width?: string;
   subtitle_width?: number;
   text_width?: string;
   align?: any;

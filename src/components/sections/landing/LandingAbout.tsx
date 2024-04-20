@@ -14,7 +14,6 @@ const LandingAbout = (): JSX.Element => {
               <LandingCard
                 {...item}
                 align="center"
-                icon_width={70}
                 card_height="13rem"
               />
             </div>

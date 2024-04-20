@@ -14,7 +14,7 @@ const LandingFeatures = (): JSX.Element => {
               {featuresCardData.map((item, index) => (
                 <LandigCard
                   {...item}
-                  icon_width={52}
+                  icon_width="45px"
                   align="flex-start"
                   gap="12px"
                   text_width="380px"
