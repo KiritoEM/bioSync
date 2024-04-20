@@ -2,10 +2,11 @@
     width: 100%;
     overflow: hidden;
     height: 4.5rem;
-    position: fixed;
+    position: absolute;
     background-color: $green01;
     padding-top: 16px;
     padding-bottom: 16px;
+    z-index: 1000;
     top: 0;
 
     &__container {

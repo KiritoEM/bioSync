@@ -8,7 +8,7 @@ const LandingAbout = (): JSX.Element => {
         <h2>How our app Work</h2>
       </div>
       <div className="about-content">
-        <div className="row">
+        <div className="row gx-5">
           {aboutCardData.map((item, index) => (
             <div className="col-4" key={index}>
               <AboutCard {...item} />
