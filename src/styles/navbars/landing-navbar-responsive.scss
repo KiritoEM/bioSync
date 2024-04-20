@@ -46,9 +46,11 @@
 .open-landing-nav {
     padding: 2.45rem 0;
     height: max-content;
+    transition: 0.2s ease;
 }
 
 .close-landing-nav {
     padding: 0;
     height: 0;
+    transition: 0.2s ease;
 }

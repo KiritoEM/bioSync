@@ -11,8 +11,9 @@
 
     @include screen(small) {
         position: fixed;
-        box-shadow: 7px 0 10px rgba(0, 0, 0, 0.295);
+        height: 5rem;
     }
+
 
     &__container {
         height: 100%;
@@ -59,5 +60,11 @@
                 font-weight: 500;
             }
         }
+    }
+}
+
+.open-nav-responsive {
+    @include screen(small) {
+        box-shadow: 7px 0 10px rgba(0, 0, 0, 0.295);
     }
 }
