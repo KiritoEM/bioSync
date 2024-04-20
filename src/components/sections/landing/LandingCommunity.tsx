@@ -8,7 +8,10 @@ const LandingCommunity = (): JSX.Element => {
           </div>
         </div>
         <div className="col-6">
-          <div className="community-suscribe"></div>
+          <div className="community-subscribe">
+            <h5>Subscribe to the newsletter</h5>
+            <div className="input"></div>
+          </div>
         </div>
       </div>
     </section>

@@ -4,4 +4,21 @@
     padding: 30vh;
     background-size: contain;
     @include container;
+
+    .community-header h1 {
+        font-weight: 600;
+        color: $green02;
+    }
+
+    .community-subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+
+        h5 {
+            color: $green02;
+            font-weight: 600;
+        }
+    }
 }
