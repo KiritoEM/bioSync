@@ -13,10 +13,14 @@ interface Ichildren {
   children: ReactNode;
 }
 
-interface IaboutCardData {
+interface ILandingCard {
   icon: string;
   subtitle: string;
   text: string;
+  icon_width?: number;
+  icon_height?: number;
+  subtitle_width?: number;
+  subtitle_height?: number;
 }
 
-export type { Ititle, InavList, Ichildren, IaboutCardData };
+export type { Ititle, InavList, Ichildren, ILandingCard };

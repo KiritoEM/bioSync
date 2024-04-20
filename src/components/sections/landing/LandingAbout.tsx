@@ -1,4 +1,4 @@
-import AboutCard from "@/components/cards/AboutCard";
+import LandingCard from "@/components/cards/LandingCard";
 import { aboutCardData } from "@/helpers/constants";
 
 const LandingAbout = (): JSX.Element => {
@@ -11,7 +11,7 @@ const LandingAbout = (): JSX.Element => {
         <div className="row gx-5">
           {aboutCardData.map((item, index) => (
             <div className="col-4" key={index}>
-              <AboutCard {...item} />
+              <LandingCard {...item} />
             </div>
           ))}
         </div>

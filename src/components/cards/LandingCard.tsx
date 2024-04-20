@@ -1,6 +1,12 @@
-import { IaboutCardData } from "@/utils/interfaces";
+import { ILandingCard } from "@/utils/interfaces";
 
-const AboutCard = ({ icon, subtitle, text }: IaboutCardData): JSX.Element => {
+const LandigCard = ({
+  icon,
+  subtitle,
+  text,
+  icon_height,
+  icon_width,
+}: ILandingCard): JSX.Element => {
   return (
     <article className="about-card">
       <div className="icon">
@@ -14,4 +20,4 @@ const AboutCard = ({ icon, subtitle, text }: IaboutCardData): JSX.Element => {
   );
 };
 
-export default AboutCard;
+export default LandigCard;

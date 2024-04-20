@@ -5,8 +5,8 @@ import Logo from "../Logo";
 const LandingNavbar = (): JSX.Element => {
   return (
     <Fragment>
-      <nav id="landing-navbar">
-        <div id="landing-navbar__container">
+      <nav className="landing-navbar">
+        <div className="landing-navbar__container">
           <Logo />
           <div className="menu-items">
             <ul>

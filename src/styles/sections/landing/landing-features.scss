@@ -1,10 +1,13 @@
-#landing-features{
+.landing-features {
     width: 100%;
     overflow: hidden;
     margin-top: 4rem;
     @include container;
 
-    .features-content{
-        
+    .features-content {
+        .title h2 {
+            color: $green02;
+            font-weight: 600;
+        }
     }
 }
