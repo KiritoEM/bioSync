@@ -7,6 +7,11 @@
     flex-direction: column;
     justify-content: center;
 
+    @include screen(small) {
+        height: 100vh;
+        margin-top: 0;
+    }
+
 
     .hero-container {
         display: flex;
@@ -21,6 +26,8 @@
 
         @include screen(small) {
             @include container;
+            margin-top: 0;
+            align-items: center
         }
 
         h1 {
@@ -90,6 +97,8 @@
 
         @include screen(small) {
             margin-top: 3rem;
+            position: absolute;
+            bottom: 0;
         }
 
         img {
