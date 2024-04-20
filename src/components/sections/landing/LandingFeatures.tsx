@@ -12,7 +12,13 @@ const LandingFeatures = (): JSX.Element => {
             </div>
             <div className="features-points">
               {featuresCardData.map((item, index) => (
-                <LandigCard  {...item}  icon_width={52} align="flex-start" gap="18px" text_width="380px"/>
+                <LandigCard
+                  {...item}
+                  icon_width={52}
+                  align="flex-start"
+                  gap="12px"
+                  text_width="380px"
+                />
               ))}
             </div>
           </div>
