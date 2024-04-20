@@ -9,6 +9,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 5vh;
 
         .title h2 {
             color: $green02;
@@ -18,7 +19,7 @@
         .features-points {
             display: flex;
             flex-direction: column;
-            gap: 4vh;
+            gap: 3vh;
         }
     }
 }
