@@ -1,4 +1,6 @@
+import Earth from "@/components/earth/Earth";
 import LandingLayout from "@/components/Layouts/LandingLayout";
+import Logo from "@/components/Logo";
 import MetaTitle from "@/components/meta/MetaTitle";
 import LandingAbout from "@/components/sections/landing/LandingAbout";
 import LandingCommunity from "@/components/sections/landing/LandingCommunity";
@@ -16,6 +18,12 @@ const landing = (): JSX.Element => {
           <LandingAbout />
           <LandingFeatures />
           <LandingCommunity />
+          <section className="landing__earth">
+            <Earth />
+          </section>
+          <section className="footer">
+             <Logo />
+          </section>
         </LandingLayout>
       </section>
     </Fragment>

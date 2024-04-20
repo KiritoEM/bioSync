@@ -2,3 +2,22 @@
 @import "./sections/landing/landing-about.scss";
 @import "./sections/landing/landing-features.scss";
 @import "./sections/landing/landing-community.scss";
+
+.landing__earth {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+    background-color: $light;
+    padding: 15vh 0;
+}
+
+.footer {
+    width: 100%;
+    overflow: hidden;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
