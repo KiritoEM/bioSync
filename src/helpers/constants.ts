@@ -1,4 +1,4 @@
-import { IaboutCardData, InavList } from "@/utils/interfaces";
+import { ILandingCard, InavList } from "@/utils/interfaces";
 
 const navList: InavList[] = [
   {
@@ -12,7 +12,7 @@ const navList: InavList[] = [
   },
 ];
 
-const aboutCardData: IaboutCardData[] = [
+const aboutCardData: ILandingCard[] = [
   {
     icon: "/about-icon1.png",
     subtitle: "Upload your product",
@@ -30,4 +30,17 @@ const aboutCardData: IaboutCardData[] = [
   },
 ];
 
-export { navList, aboutCardData };
+const featuresCard: ILandingCard[] = [
+  {
+    icon: "/send-icon.png",
+    subtitle: "Artificial intelligence verificationion",
+    text: "Add your product to our app and we will check if it is bio with our Artificial Intelligence",
+  },
+  {
+    icon: "/discovery-icon.png",
+    subtitle: "System recommandation",
+    text: "Our Intelligence Artificial will recommand you product or components bio",
+  },
+];
+
+export { navList, aboutCardData; featuresCard };
