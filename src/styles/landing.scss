@@ -8,9 +8,9 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    margin-top: -15px;
-    background-color: $light;
-    padding: 15vh 0;
+    padding: 10vh 0;
+    position: relative;
+    z-index: 200;
 }
 
 .footer {
