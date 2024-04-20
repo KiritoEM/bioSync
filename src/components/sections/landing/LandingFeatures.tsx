@@ -7,9 +7,7 @@ const LandingFeatures = (): JSX.Element => {
             <div className="title">
               <h2>Discover our features</h2>
             </div>
-            <div className="features-points">
-    
-            </div>
+            <div className="features-points"></div>
           </div>
         </div>
         <div className="col-6">

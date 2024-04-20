@@ -18,9 +18,10 @@ interface ILandingCard {
   subtitle: string;
   text: string;
   icon_width?: number;
-  icon_height?: number;
   subtitle_width?: number;
-  subtitle_height?: number;
+  text_width?: number;
+  align?: any;
+  card_height?: string;
 }
 
 export type { Ititle, InavList, Ichildren, ILandingCard };
