@@ -15,6 +15,12 @@
     }
 
 
+    @include screen(medium) {
+        position: fixed;
+        height: 5rem;
+    }
+
+
     &__container {
         height: 100%;
         display: flex;
@@ -65,6 +71,10 @@
 
 .open-nav-responsive {
     @include screen(small) {
+        box-shadow: 7px 0 10px rgba(0, 0, 0, 0.295);
+    }
+
+    @include screen(medium) {
         box-shadow: 7px 0 10px rgba(0, 0, 0, 0.295);
     }
 }
