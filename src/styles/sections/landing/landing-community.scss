@@ -1,0 +1,7 @@
+.landing__community {
+    margin-top: 13vh;
+    background-image: url("/community-bg.png");
+    padding: 30vh;
+    background-size: contain;
+    @include container;
+}
