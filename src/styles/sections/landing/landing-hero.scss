@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
 
+
     .hero-container {
         display: flex;
         flex-direction: column;
@@ -14,17 +15,37 @@
         margin-top: 16vh;
         gap: 4vh;
 
+        @include screen(medium) {
+            gap: 2rem;
+        }
+
+        @include screen(small) {
+            @include container;
+        }
+
         h1 {
             font-size: 46px;
             font-weight: 700;
             color: $green02;
             text-align: center;
+
+            @include screen(medium) {
+                font-size: 40px;
+            }
+
+            @include screen(small) {
+                font-size: 33px;
+            }
         }
 
         p {
             color: $green03;
             width: 482px;
             text-align: center;
+
+            @include screen(small) {
+                width: 100%;
+            }
         }
 
         .buttons {
@@ -63,9 +84,21 @@
         width: 100%;
         margin-top: -5vh;
 
+        @include screen(medium) {
+            margin-top: -1rem;
+        }
+
+        @include screen(small) {
+            margin-top: 3rem;
+        }
+
         img {
             width: 100%;
             object-fit: cover;
+
+            @include screen(small) {
+                object-fit: contain;
+            }
         }
     }
 }
