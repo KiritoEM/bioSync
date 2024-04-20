@@ -1,3 +1,6 @@
+import LandigCard from "@/components/cards/LandingCard";
+import { featuresCardData } from "@/helpers/constants";
+
 const LandingFeatures = (): JSX.Element => {
   return (
     <section className="landing-features">
@@ -8,7 +11,9 @@ const LandingFeatures = (): JSX.Element => {
               <h2>Discover our features</h2>
             </div>
             <div className="features-points">
-                 
+              {featuresCardData.map((item, index) => (
+                <LandigCard  {...item}  icon_width={52} align="flex-start" gap="18px"/>
+              ))}
             </div>
           </div>
         </div>

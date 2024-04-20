@@ -30,7 +30,7 @@ const aboutCardData: ILandingCard[] = [
   },
 ];
 
-const featuresCard: ILandingCard[] = [
+const featuresCardData: ILandingCard[] = [
   {
     icon: "/send-icon.png",
     subtitle: "Artificial intelligence verificationion",
@@ -43,4 +43,4 @@ const featuresCard: ILandingCard[] = [
   },
 ];
 
-export { navList, aboutCardData; featuresCard };
+export { navList, aboutCardData, featuresCardData };

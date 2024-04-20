@@ -15,7 +15,7 @@ const LandingAbout = (): JSX.Element => {
                 {...item}
                 align="center"
                 icon_width={70}
-                card_height="12.5rem"
+                card_height="13rem"
               />
             </div>
           ))}

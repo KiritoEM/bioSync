@@ -22,6 +22,7 @@ interface ILandingCard {
   text_width?: number;
   align?: any;
   card_height?: string;
+  gap?: string;
 }
 
 export type { Ititle, InavList, Ichildren, ILandingCard };
