@@ -38,6 +38,10 @@
                 border-radius: $radius01;
                 padding: 11px 15px;
                 font-size: 14px;
+
+                &:focus {
+                    outline: 2px solid $green02;
+                }
             }
 
             .btn {
