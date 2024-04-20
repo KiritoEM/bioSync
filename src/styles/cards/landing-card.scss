@@ -8,6 +8,10 @@
         gap: 17px;
     }
 
+    @include screen(medium) {
+        height: 11rem !important;
+    }
+
     .icon {
         flex-grow: 1;
     }
@@ -31,6 +35,10 @@
             color: $gray01;
 
             @include screen(small) {
+                width: 100% !important;
+            }
+
+            @include screen(medium) {
                 width: 100% !important;
             }
         }

@@ -8,6 +8,14 @@
     align-items: center;
     @include container;
 
+    @include screen(medium){
+        gap: 3rem;
+    }
+
+    @include screen(small){
+        gap: 3rem;
+    }
+
     .about-header h2 {
         color: $green02;
         font-weight: 600;

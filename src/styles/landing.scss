@@ -11,6 +11,14 @@
     padding: 10vh 0;
     position: relative;
     z-index: 200;
+
+    @include screen(medium) {
+        padding: 3rem 0;
+    }
+
+    @include screen(small) {
+        padding: 3rem 0;
+    }
 }
 
 .footer {
