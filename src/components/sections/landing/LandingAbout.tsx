@@ -11,7 +11,7 @@ const LandingAbout = (): JSX.Element => {
         <div className="row gx-5 gy-5 gy-lg-2">
           {aboutCardData.map((item, index) => (
             <div className="col-md-6 col-lg-4" key={index}>
-              <LandingCard {...item} align="center" card_height="13rem" />
+              <LandingCard {...item} text_align="center" card_height="13rem" />
             </div>
           ))}
         </div>

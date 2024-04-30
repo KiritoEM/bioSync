@@ -16,7 +16,7 @@ const LandingFeatures = (): JSX.Element => {
                   key={index}
                   {...item}
                   icon_width="45px"
-                  align="left"
+                  align="flex-start"
                   gap="12px"
                   text_width="380px"
                 />

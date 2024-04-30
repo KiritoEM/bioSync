@@ -10,6 +10,7 @@ const LandigCard = ({
   text_width,
   card_height,
   gap,
+  text_align,
 }: ILandingCard): JSX.Element => {
   return (
     <article
@@ -27,7 +28,7 @@ const LandigCard = ({
         <h5
           style={{
             width: `${subtitle_width ? subtitle_width : "100%"}`,
-            textAlign: align ? align : "left",
+            textAlign: text_align ? text_align : "left",
           }}
         >
           {subtitle}
@@ -35,7 +36,7 @@ const LandigCard = ({
         <p
           style={{
             width: `${text_width ? text_width : "100%"}`,
-            textAlign: align ? align : "left",
+            textAlign: text_align ? text_align : "left",
           }}
         >
           {text}
