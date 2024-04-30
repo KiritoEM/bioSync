@@ -13,7 +13,7 @@ const LandigCard = ({
 }: ILandingCard): JSX.Element => {
   return (
     <article
-      className="about-card"
+      className="landing-card"
       style={{
         alignItems: `${align}`,
         height: `${card_height ? card_height : "max-content"}`,

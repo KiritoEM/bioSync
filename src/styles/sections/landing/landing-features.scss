@@ -9,6 +9,10 @@
         margin-top: 4rem;
     }
 
+    @include screen(small) {
+        margin-top: 4rem;
+    }
+
     .features-content {
         height: 100%;
         display: flex;
@@ -17,6 +21,10 @@
         gap: 5vh;
 
         @include screen(medium) {
+            gap: 2rem;
+        }
+
+        @include screen(small) {
             gap: 2rem;
         }
 
