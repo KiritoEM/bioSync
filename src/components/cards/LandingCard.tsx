@@ -27,16 +27,16 @@ const LandigCard = ({
       <div className="content">
         <h5
           style={{
-            width: `${subtitle_width ? subtitle_width : "100%"}`,
             textAlign: text_align ? text_align : "left",
+            width: `${subtitle_width ? subtitle_width : "100%"}`,
           }}
         >
           {subtitle}
         </h5>
         <p
           style={{
-            width: `${text_width ? text_width : "100%"}`,
             textAlign: text_align ? text_align : "left",
+            width: `${text_width ? text_width : "100%"}`,
           }}
         >
           {text}
