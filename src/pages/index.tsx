@@ -11,7 +11,7 @@ import React, { Fragment } from "react";
 const landing = (): JSX.Element => {
   return (
     <Fragment>
-      <MetaTitle title="Bienvenue sur BioSync" />
+      <MetaTitle title="Welcome to BioSync" />
       <section id="landing">
         <LandingLayout>
           <LandingHero />
@@ -22,7 +22,7 @@ const landing = (): JSX.Element => {
             <Earth />
           </section>
           <section className="footer">
-             <Logo />
+            <Logo />
           </section>
         </LandingLayout>
       </section>
