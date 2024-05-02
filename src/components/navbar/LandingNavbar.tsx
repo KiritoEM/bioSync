@@ -8,7 +8,7 @@ import { useTrans } from "@/hooks/useTrans";
 
 const LandingNavbar = (): JSX.Element => {
   const { menuToogle, openMenu } = useNav();
-  const { optState, toogleOpt, lang } = useTrans();
+  const { optState, toogleOpt, lang, selectLangue, closeOpt } = useTrans();
   return (
     <Fragment>
       <nav className={`landing-navbar ${openMenu && "open-nav-responsive"}`}>
@@ -28,7 +28,14 @@ const LandingNavbar = (): JSX.Element => {
                   className={`window-toogle ${optState ? "d-flex" : "d-none"}`}
                 >
                   {languagesData.map((lang, index) => (
-                    <p>{lang.lang}</p>
+                    <p
+                      onClick={() => {
+                        selectLangue({ code: lang.code, lang: lang.lang });
+                        closeOpt();
+                      }}
+                    >
+                      {lang.lang}
+                    </p>
                   ))}
                 </div>
               </li>

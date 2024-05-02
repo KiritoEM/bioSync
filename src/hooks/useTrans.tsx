@@ -19,6 +19,10 @@ export const TranslationProvider: React.FC<ITranslationProvider> = ({
     setOptState(!optState);
   };
 
+  const closeOpt = () => {
+    setOptState(false);
+  };
+
   const selectLangue = (lang: Ilang) => {
     setLang(lang);
   };
@@ -30,6 +34,7 @@ export const TranslationProvider: React.FC<ITranslationProvider> = ({
         toogleOpt,
         selectLangue,
         lang,
+        closeOpt
       }}
     >
       {children}
