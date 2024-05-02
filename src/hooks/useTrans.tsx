@@ -12,7 +12,7 @@ export const TranslationProvider: React.FC<ITranslationProvider> = ({
   children,
 }): JSX.Element => {
   const [optState, setOptState] = useState<boolean>(false);
-  const [lang, setLang] = useState<Ilang>({ code: "EN", lang: "English" });
+  const [lang, setLang] = useState<Ilang>({ code: "en", lang: "English" });
 
   //toogle function
   const toogleOpt = () => {

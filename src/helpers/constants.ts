@@ -3,12 +3,15 @@ import { ILandingCard, InavList } from "@/utils/interfaces";
 const navList: InavList[] = [
   {
     label: "Home",
+    key: "Home",
   },
   {
     label: "About",
+    key: " About",
   },
   {
     label: "Features",
+    key: " Features",
   },
 ];
 
@@ -45,11 +48,11 @@ const featuresCardData: ILandingCard[] = [
 
 const languagesData = [
   {
-    code: "EN",
+    code: "en",
     lang: "English",
   },
   {
-    code: "FR",
+    code: "fr",
     lang: "Francais",
   },
 ];

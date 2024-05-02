@@ -7,6 +7,7 @@ interface Ititle {
 interface InavList {
   label: string;
   scrollSection?: string;
+  key? : string
 }
 
 interface Ichildren {
