@@ -11,14 +11,11 @@ const LandingHero = (): JSX.Element => {
             __html: t("hero_title"),
           }}
         />
-        <p>
-          Check if your product is ecologic and bio with our Artificial
-          Intelligence, we facility your checking
-        </p>
+        <p>{t("hero_text")}</p>
         <div className="buttons">
-          <button className="btn">Get started</button>
+          <button className="btn">{t("hero_button1")}</button>
           <button className="btn">
-            Learn more <img src="/arrow-right.png" alt="" />
+            {t("hero_button2")} <img src="/arrow-right.png" alt="" />
           </button>
         </div>
       </div>
