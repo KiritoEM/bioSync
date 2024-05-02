@@ -1,16 +1,16 @@
 import { Ichildren } from "@/utils/interfaces";
-import { Fragment } from "react";
 import LandingNavbar from "../navbar/LandingNavbar";
 import { NavProvider } from "@/hooks/useNav";
+import { TranslationProvider } from "@/hooks/useTrans";
 
 const LandingLayout = ({ children }: Ichildren): JSX.Element => {
   return (
-    <Fragment>
+    <TranslationProvider>
       <NavProvider>
         <LandingNavbar />
         {children}
       </NavProvider>
-    </Fragment>
+    </TranslationProvider>
   );
 };
 

@@ -1,12 +1,14 @@
-import { navList } from "@/helpers/constants";
+import { languagesData, navList } from "@/helpers/constants";
 import { Fragment } from "react";
 import Logo from "../Logo";
 import LandingNavbarResponsive from "./LandingNavbarResponsive";
 import { useNav } from "@/hooks/useNav";
 import Overlay from "./Overlay";
+import { useTrans } from "@/hooks/useTrans";
 
 const LandingNavbar = (): JSX.Element => {
   const { menuToogle, openMenu } = useNav();
+  const { optState, toogleOpt, lang } = useTrans();
   return (
     <Fragment>
       <nav className={`landing-navbar ${openMenu && "open-nav-responsive"}`}>
@@ -18,11 +20,16 @@ const LandingNavbar = (): JSX.Element => {
                 <li key={index}>{route.label}</li>
               ))}
               <li id="translation-option">
-                <div className="item">
-                  EN <img src="/chevron-down.png" alt="" />
+                <div className="item" onClick={() => toogleOpt()}>
+                  {lang.lang}
+                  <img src="/chevron-down.png" alt="" />
                 </div>
-                <div className="window-toogle">
-                   
+                <div
+                  className={`window-toogle ${optState ? "d-flex" : "d-none"}`}
+                >
+                  {languagesData.map((lang, index) => (
+                    <p>{lang.lang}</p>
+                  ))}
                 </div>
               </li>
             </ul>

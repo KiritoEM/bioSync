@@ -31,9 +31,15 @@ interface ILandingCard {
 }
 
 interface ITranslationContext {
-  openMenu: boolean;
-  openOverlay: boolean;
-  menuToogle: () => void;
+  optState: boolean;
+  lang: Ilang;
+  toogleOpt: () => void;
+  selectLangue: (lang: Ilang) => void;
+}
+
+interface Ilang {
+  lang: string;
+  code: string;
 }
 
 interface IDefaultTranslationContext {
@@ -58,6 +64,10 @@ interface IDefaultNavContext {
   menuToogle: () => null;
 }
 
+interface ITranslationProvider {
+  children?: ReactNode;
+}
+
 export type {
   Ititle,
   InavList,
@@ -67,5 +77,7 @@ export type {
   IDefaultNavContext,
   IDefaultTranslationContext,
   INavContext,
-  IAuthProvider
+  IAuthProvider,
+  ITranslationProvider,
+  Ilang
 };

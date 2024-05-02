@@ -43,4 +43,15 @@ const featuresCardData: ILandingCard[] = [
   },
 ];
 
-export { navList, aboutCardData, featuresCardData };
+const languagesData = [
+  {
+    code: "EN",
+    lang: "English",
+  },
+  {
+    code: "FR",
+    lang: "Francais",
+  },
+];
+
+export { navList, aboutCardData, featuresCardData, languagesData };

@@ -1,35 +1,35 @@
 import {
   IDefaultTranslationContext,
+  Ilang,
   ITranslationContext,
+  ITranslationProvider,
 } from "@/utils/interfaces";
 import React, { ReactNode, createContext, useContext, useState } from "react";
 
-interface IAuthProvider {
-  children?: ReactNode;
-}
+const TranslationContext = createContext<ITranslationContext | null>(null);
 
-const TranslationContext = createContext<
-  ITranslationContext | IDefaultTranslationContext | null
->(null);
-
-export const TranslationProvider: React.FC<IAuthProvider> = ({
+export const TranslationProvider: React.FC<ITranslationProvider> = ({
   children,
 }): JSX.Element => {
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [openOverlay, setOpenOverlay] = useState<boolean>(false);
+  const [optState, setOptState] = useState<boolean>(false);
+  const [lang, setLang] = useState<Ilang>({ code: "EN", lang: "English" });
 
   //toogle function
-  const menuToogle = () => {
-    setOpenMenu(!openMenu);
-    setOpenOverlay(!openOverlay);
+  const toogleOpt = () => {
+    setOptState(!optState);
+  };
+
+  const selectLangue = (lang: Ilang) => {
+    setLang(lang);
   };
 
   return (
     <TranslationContext.Provider
       value={{
-        openMenu,
-        openOverlay,
-        menuToogle,
+        optState,
+        toogleOpt,
+        selectLangue,
+        lang,
       }}
     >
       {children}
@@ -38,7 +38,7 @@ export const TranslationProvider: React.FC<IAuthProvider> = ({
 };
 
 //hooks exportation
-export const useTranslation = () => {
+export const useTrans = () => {
   const context = useContext(TranslationContext);
 
   if (!context) {
