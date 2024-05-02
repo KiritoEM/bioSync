@@ -30,4 +30,42 @@ interface ILandingCard {
   text_align?: TextAlign;
 }
 
-export type { Ititle, InavList, Ichildren, ILandingCard };
+interface ITranslationContext {
+  openMenu: boolean;
+  openOverlay: boolean;
+  menuToogle: () => void;
+}
+
+interface IDefaultTranslationContext {
+  openMenu: false;
+  openOverlay: false;
+  menuToogle: () => null;
+}
+
+interface IAuthProvider {
+  children?: ReactNode;
+}
+
+interface INavContext {
+  openMenu: boolean;
+  openOverlay: boolean;
+  menuToogle: () => void;
+}
+
+interface IDefaultNavContext {
+  openMenu: false;
+  openOverlay: false;
+  menuToogle: () => null;
+}
+
+export type {
+  Ititle,
+  InavList,
+  Ichildren,
+  ILandingCard,
+  ITranslationContext,
+  IDefaultNavContext,
+  IDefaultTranslationContext,
+  INavContext,
+  IAuthProvider
+};

@@ -1,10 +1,18 @@
-import { IAuthProvider, IDefaultNavContext, INavContext } from "@/utils/interfaces";
+import {
+  IDefaultTranslationContext,
+  ITranslationContext,
+} from "@/utils/interfaces";
 import React, { ReactNode, createContext, useContext, useState } from "react";
 
+interface IAuthProvider {
+  children?: ReactNode;
+}
 
-const NavContext = createContext<INavContext | IDefaultNavContext | null>(null);
+const TranslationContext = createContext<
+  ITranslationContext | IDefaultTranslationContext | null
+>(null);
 
-export const NavProvider: React.FC<IAuthProvider> = ({
+export const TranslationProvider: React.FC<IAuthProvider> = ({
   children,
 }): JSX.Element => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -17,7 +25,7 @@ export const NavProvider: React.FC<IAuthProvider> = ({
   };
 
   return (
-    <NavContext.Provider
+    <TranslationContext.Provider
       value={{
         openMenu,
         openOverlay,
@@ -25,16 +33,16 @@ export const NavProvider: React.FC<IAuthProvider> = ({
       }}
     >
       {children}
-    </NavContext.Provider>
+    </TranslationContext.Provider>
   );
 };
 
 //hooks exportation
-export const useNav = () => {
-  const context = useContext(NavContext);
+export const useTranslation = () => {
+  const context = useContext(TranslationContext);
 
   if (!context) {
-    throw new Error("usenav must be used within an Provider");
+    throw new Error("hooks must be used within an Provider");
   }
   return context;
 };

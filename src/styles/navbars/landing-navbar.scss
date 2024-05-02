@@ -1,6 +1,5 @@
 .landing-navbar {
     width: 100%;
-    overflow: hidden;
     height: 4.5rem;
     position: absolute;
     background-color: $green01;
@@ -55,10 +54,21 @@
 
                 #translation-option {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
 
-                    img {
-                        width: 16px;
+                    .item {
+                        img {
+                            width: 16px;
+                        }
+                    }
+
+                    .window-toogle {
+                        position: absolute;
+                        margin-top: 25px;
+                        width: 55px;
+                        height: 55px;
+                        background-color: #fff;
+                        border-radius: 5px;
                     }
                 }
             }

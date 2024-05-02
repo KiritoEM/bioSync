@@ -18,7 +18,12 @@ const LandingNavbar = (): JSX.Element => {
                 <li key={index}>{route.label}</li>
               ))}
               <li id="translation-option">
-                EN <img src="/chevron-down.png" alt="" />
+                <div className="item">
+                  EN <img src="/chevron-down.png" alt="" />
+                </div>
+                <div className="window-toogle">
+                   
+                </div>
               </li>
             </ul>
           </div>
