@@ -1,10 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 const LandingHero = (): JSX.Element => {
+  const { t } = useTranslation();
+
   return (
     <section className="landing__hero">
       <div className="hero-container">
-        <h1>
-          Join the Green <br /> Revolution with BioSync
-        </h1>
+        <h1
+          dangerouslySetInnerHTML={{
+            __html: t("hero_title"),
+          }}
+        />
         <p>
           Check if your product is ecologic and bio with our Artificial
           Intelligence, we facility your checking
