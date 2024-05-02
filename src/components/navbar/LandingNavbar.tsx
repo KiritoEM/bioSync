@@ -17,6 +17,9 @@ const LandingNavbar = (): JSX.Element => {
               {navList.map((route, index) => (
                 <li key={index}>{route.label}</li>
               ))}
+              <li id="translation-option">
+                EN <img src="/chevron-down.png" alt="" />
+              </li>
             </ul>
           </div>
           <div className="button d-none d-lg-flex">

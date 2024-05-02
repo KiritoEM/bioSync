@@ -52,6 +52,15 @@
                         transition: 0.7s ease-in-out;
                     }
                 }
+
+                #translation-option {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 16px;
+                    }
+                }
             }
         }
 
