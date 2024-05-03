@@ -7,7 +7,7 @@ const LandingAbout = (): JSX.Element => {
   return (
     <section className="landing__about">
       <div className="about-header">
-        <h2>{t("about_title")}</h2>
+        <h2>{t("about.title")}</h2>
       </div>
       <div className="about-content">
         <div className="row gx-5 gy-5 gy-lg-2">

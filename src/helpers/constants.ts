@@ -15,18 +15,18 @@ const navList: InavList[] = [
 const aboutCardData: ILandingCard[] = [
   {
     icon: "/about-icon1.png",
-    subtitle: "Upload your product",
-    text: "Add your product details and our ArtificiaI Intelligence will analyse it",
+    subtitle: "about.upload.subtitle",
+    text: "about.upload.text",
   },
   {
     icon: "/about-icon2.png",
-    subtitle: "Checking if  bio",
-    text: "Our Artificial Intelligence will anayse and check if your product is bio",
+    subtitle: "about.checking.subtitle",
+    text: "about.checking.text",
   },
   {
     icon: "/about-icon3.png",
-    subtitle: "Recommandation",
-    text: "Recommandation with Artificial Intelligence for product bio",
+    subtitle: "about.recommandation.subtitle",
+    text: "about.recommandation.text",
   },
 ];
 

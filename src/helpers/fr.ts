@@ -11,7 +11,21 @@ const frTranslation = {
     button1: "Commencer",
     button2: "Apprendre plus",
   },
-  about_title: "Comment fonctionne notre application",
+  about: {
+    title: "Comment notre apllication fonctionne",
+    upload: {
+      subtitle: "Téléchargez votre produit",
+      text: "Ajoutez les détails de votre produit et notre Intelligence Artificielle l'analysera",
+    },
+    checking: {
+      subtitle: "Vérification si bio",
+      text: "Notre Intelligence Artificielle analysera et vérifiera si votre produit est bio",
+    },
+    recommandation: {
+      subtitle: "Recommandation",
+      text: "Recommandation avec Intelligence Artificielle pour  produit bio",
+    },
+  },
 };
 
 export default frTranslation;

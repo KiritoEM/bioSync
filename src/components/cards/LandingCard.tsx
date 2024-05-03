@@ -1,4 +1,5 @@
 import { ILandingCard } from "@/utils/interfaces";
+import { useTranslation } from "react-i18next";
 
 const LandigCard = ({
   icon,
@@ -12,6 +13,7 @@ const LandigCard = ({
   gap,
   text_align,
 }: ILandingCard): JSX.Element => {
+  const { t } = useTranslation();
   return (
     <article
       className="landing-card"
@@ -31,7 +33,7 @@ const LandigCard = ({
             width: `${subtitle_width ? subtitle_width : "100%"}`,
           }}
         >
-          {subtitle}
+          {t(subtitle)}
         </h5>
         <p
           style={{
@@ -39,7 +41,7 @@ const LandigCard = ({
             width: `${text_width ? text_width : "100%"}`,
           }}
         >
-          {text}
+          {t(text)}
         </p>
       </div>
     </article>
