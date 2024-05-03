@@ -52,7 +52,7 @@ const LandingNavbar = (): JSX.Element => {
             </ul>
           </div>
           <div className="button d-none d-lg-flex">
-            <button className="btn">Get started</button>
+            <button className="btn">{t("nav_button")}</button>
           </div>
 
           {/* menu-icon */}

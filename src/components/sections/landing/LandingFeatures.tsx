@@ -1,7 +1,9 @@
 import LandigCard from "@/components/cards/LandingCard";
 import { featuresCardData } from "@/helpers/constants";
+import { useTranslation } from "react-i18next";
 
 const LandingFeatures = (): JSX.Element => {
+  const { t } = useTranslation();
   return (
     <section className="landing-features">
       <div className="row gy-5 gy-md-2">
