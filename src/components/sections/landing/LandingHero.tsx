@@ -12,7 +12,9 @@ const LandingHero = (): JSX.Element => {
 
   const initializeAnimation = () => {
     if (quoteRef.current) {
+      // @ts-ignore
       const splitTextInstance = new SplitType(quoteRef.current, {
+        // @ts-ignore
         type: "words",
       });
       const timeline = gsap.timeline();
@@ -35,7 +37,10 @@ const LandingHero = (): JSX.Element => {
   const handleCharsWordsLines = () => {
     kill();
     if (splitText) {
-      splitText.split({ type: "chars, words, lines" });
+      splitText.split({
+        // @ts-ignore
+        type: "chars, words, lines",
+      });
       if (splitTextTimeline) {
         splitTextTimeline
           .from(
