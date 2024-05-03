@@ -6,18 +6,21 @@ import SplitType from "split-type";
 const LandingHero = (): JSX.Element => {
   const { t } = useTranslation();
   const quoteRef = useRef<HTMLDivElement>(null);
-  const [splitText, setSplitText] = useState<any>(null);
-  const [splitTextTimeline, setSplitTextTimeline] = useState<any>(null);
+  const [splitText, setSplitText] = useState<SplitType | null>(null);
+  const [splitTextTimeline, setSplitTextTimeline] =
+    useState<gsap.core.Timeline | null>(null);
 
   const initializeAnimation = () => {
-    const splitTextInstance = new SplitType(quoteRef.current, {
-      type: "words",
-    });
-    const timeline = gsap.timeline();
-    gsap.set(quoteRef.current, { perspective: 400 });
+    if (quoteRef.current) {
+      const splitTextInstance = new SplitType(quoteRef.current, {
+        type: "words",
+      });
+      const timeline = gsap.timeline();
+      gsap.set(quoteRef.current, { perspective: 400 });
 
-    setSplitText(splitTextInstance);
-    setSplitTextTimeline(timeline);
+      setSplitText(splitTextInstance);
+      setSplitTextTimeline(timeline);
+    }
   };
 
   const kill = () => {
@@ -33,57 +36,62 @@ const LandingHero = (): JSX.Element => {
     kill();
     if (splitText) {
       splitText.split({ type: "chars, words, lines" });
-      splitTextTimeline
-        .from(
-          splitText.chars,
-          {
-            duration: 0.2,
-            autoAlpha: 0,
-            scale: 4,
-            force3D: true,
-            stagger: 0.01,
-          },
-          0.5
-        )
-        .to(
-          splitText.words,
-          {
-            duration: 0.1,
-            color: "#121212",
-            scale: 0.9,
-            stagger: 0.1,
-          },
-          "words"
-        )
-        .to(
-          splitText.words,
-          {
-            duration: 0.2,
-            color: "#121212",
-            scale: 1,
-            stagger: 0.1,
-          },
-          "words+=0.1"
-        )
-        .to(
-          splitText.words,
-          {
-            duration: 0.1,
-            color: "#121212",
-            scale: 1,
-            stagger: 0.1,
-          },
-          "words+=0.2"
-        )
-        .to(splitText.lines, {
-          duration: 0.5,
-          x: 0,
-        });
+      if (splitTextTimeline) {
+        splitTextTimeline
+          .from(
+            splitText.chars,
+            {
+              duration: 0.2,
+              autoAlpha: 0,
+              scale: 4,
+              force3D: true,
+              stagger: 0.01,
+            },
+            0.5
+          )
+          .to(
+            splitText.words,
+            {
+              duration: 0.1,
+              color: "#121212",
+              scale: 0.9,
+              stagger: 0.1,
+            },
+            "words"
+          )
+          .to(
+            splitText.words,
+            {
+              duration: 0.2,
+              color: "#121212",
+              scale: 1,
+              stagger: 0.1,
+            },
+            "words+=0.1"
+          )
+          .to(
+            splitText.words,
+            {
+              duration: 0.1,
+              color: "#121212",
+              scale: 1,
+              stagger: 0.1,
+            },
+            "words+=0.2"
+          )
+          .to(splitText.lines, {
+            duration: 0.5,
+            x: 0,
+          });
+      }
     }
   };
 
   useEffect(() => {
     initializeAnimation();
+    return () => {
+      kill();
+    };
   }, []);
 
   useEffect(() => {
