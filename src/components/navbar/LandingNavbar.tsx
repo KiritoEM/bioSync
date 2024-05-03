@@ -25,7 +25,7 @@ const LandingNavbar = (): JSX.Element => {
           <div className="menu-items  d-none d-lg-flex">
             <ul>
               {navList.map((item, index) => (
-                <li key={index}>{t(`${item.label}`)}</li>
+                <li key={index}>{t(`${item.key}`)}</li>
               ))}
               <li id="translation-option">
                 <div className="item" onClick={() => toogleOpt()}>
@@ -52,7 +52,7 @@ const LandingNavbar = (): JSX.Element => {
             </ul>
           </div>
           <div className="button d-none d-lg-flex">
-            <button className="btn">{t("nav_button")}</button>
+            <button className="btn">{t("nav.button")}</button>
           </div>
 
           {/* menu-icon */}

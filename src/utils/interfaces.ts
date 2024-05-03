@@ -5,9 +5,8 @@ interface Ititle {
 }
 
 interface InavList {
-  label: string;
   scrollSection?: string;
-  key? : string
+  key?: string;
 }
 
 interface Ichildren {
@@ -81,5 +80,5 @@ export type {
   INavContext,
   IAuthProvider,
   ITranslationProvider,
-  Ilang
+  Ilang,
 };
