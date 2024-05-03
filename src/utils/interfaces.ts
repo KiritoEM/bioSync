@@ -36,6 +36,7 @@ interface ITranslationContext {
   toogleOpt: () => void;
   closeOpt: () => void;
   selectLangue: (lang: Ilang) => void;
+  changelangue: (lang: string) => void;
 }
 
 interface Ilang {

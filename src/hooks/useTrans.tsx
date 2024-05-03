@@ -5,6 +5,7 @@ import {
   ITranslationProvider,
 } from "@/utils/interfaces";
 import React, { ReactNode, createContext, useContext, useState } from "react";
+import i18n from "i18next";
 
 const TranslationContext = createContext<ITranslationContext | null>(null);
 
@@ -27,6 +28,10 @@ export const TranslationProvider: React.FC<ITranslationProvider> = ({
     setLang(lang);
   };
 
+  const changelangue = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <TranslationContext.Provider
       value={{
@@ -34,7 +39,8 @@ export const TranslationProvider: React.FC<ITranslationProvider> = ({
         toogleOpt,
         selectLangue,
         lang,
-        closeOpt
+        closeOpt,
+        changelangue,
       }}
     >
       {children}

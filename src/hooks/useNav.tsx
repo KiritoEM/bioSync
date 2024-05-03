@@ -1,6 +1,9 @@
-import { IAuthProvider, IDefaultNavContext, INavContext } from "@/utils/interfaces";
+import {
+  IAuthProvider,
+  IDefaultNavContext,
+  INavContext,
+} from "@/utils/interfaces";
 import React, { ReactNode, createContext, useContext, useState } from "react";
-
 
 const NavContext = createContext<INavContext | IDefaultNavContext | null>(null);
 
@@ -34,7 +37,7 @@ export const useNav = () => {
   const context = useContext(NavContext);
 
   if (!context) {
-    throw new Error("usenav must be used within an Provider");
+    throw new Error("hook must be used within an Provider");
   }
   return context;
 };

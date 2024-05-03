@@ -5,17 +5,13 @@ import LandingNavbarResponsive from "./LandingNavbarResponsive";
 import { useNav } from "@/hooks/useNav";
 import Overlay from "./Overlay";
 import { useTrans } from "@/hooks/useTrans";
-import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 
 const LandingNavbar = (): JSX.Element => {
   const { menuToogle, openMenu } = useNav();
-  const { optState, toogleOpt, lang, selectLangue, closeOpt } = useTrans();
+  const { optState, toogleOpt, lang, selectLangue, closeOpt, changelangue } =
+    useTrans();
   const { t } = useTranslation();
-
-  const changelangue = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
 
   return (
     <Fragment>

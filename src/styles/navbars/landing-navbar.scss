@@ -118,6 +118,7 @@
 }
 
 .open-nav-responsive {
+
     @include screen(small) {
         box-shadow: 7px 0 10px rgba(0, 0, 0, 0.295);
     }
