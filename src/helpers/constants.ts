@@ -3,12 +3,15 @@ import { ILandingCard, InavList } from "@/utils/interfaces";
 const navList: InavList[] = [
   {
     key: "nav.Home",
+    sectionId: "home",
   },
   {
     key: "nav.About",
+    sectionId: "about",
   },
   {
     key: "nav.Features",
+    sectionId: "features",
   },
 ];
 

@@ -1,6 +1,7 @@
 import { languagesData, navList } from "@/helpers/constants";
 import { useNav } from "@/hooks/useNav";
 import { useTrans } from "@/hooks/useTrans";
+import scrollSection from "@/utils/scroll";
 import { useTranslation } from "react-i18next";
 
 const LandingNavbarResponsive = (): JSX.Element => {
@@ -17,8 +18,15 @@ const LandingNavbarResponsive = (): JSX.Element => {
     >
       <ul>
         {navList.map((item, index) => (
-          <li key={index}>{t(`${item.key}`)}</li>
+          <li
+            key={index}
+            onClick={() => scrollSection(item.sectionId ? item.sectionId : "")}
+          >
+            {t(`${item.key}`)}
+          </li>
         ))}
+
+        {/* option pour la translation */}
         <li id="translation-option">
           <div className="item" onClick={() => toogleOpt()}>
             {lang.lang}

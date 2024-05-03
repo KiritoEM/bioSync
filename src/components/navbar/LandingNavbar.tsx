@@ -6,6 +6,7 @@ import { useNav } from "@/hooks/useNav";
 import Overlay from "./Overlay";
 import { useTrans } from "@/hooks/useTrans";
 import { useTranslation } from "react-i18next";
+import scrollSection from "@/utils/scroll";
 
 const LandingNavbar = (): JSX.Element => {
   const { menuToogle, openMenu } = useNav();
@@ -21,7 +22,14 @@ const LandingNavbar = (): JSX.Element => {
           <div className="menu-items  d-none d-lg-flex">
             <ul>
               {navList.map((item, index) => (
-                <li key={index}>{t(`${item.key}`)}</li>
+                <li
+                  key={index}
+                  onClick={() =>
+                    scrollSection(item.sectionId ? item.sectionId : "")
+                  }
+                >
+                  {t(`${item.key}`)}
+                </li>
               ))}
               <li id="translation-option">
                 <div className="item" onClick={() => toogleOpt()}>

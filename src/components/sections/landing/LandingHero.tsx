@@ -1,5 +1,4 @@
 import TextAnimation from "@/components/animations/TextAnimation";
-import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const LandingHero = (): JSX.Element => {

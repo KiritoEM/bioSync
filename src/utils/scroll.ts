@@ -1,10 +1,14 @@
-const scollSection = (id: string) => {
-  const scrollToSection = () => {
-    const section = document.querySelector(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+const scrollSection = (id: string) => {
+  const section = document.querySelector(`#${id}`);
+  if (section) {
+    const offset = 70;
+    const position =
+      section.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({
+      top: position,
+      behavior: "smooth",
+    });
+  }
 };
 
-export default scollSection;
+export default scrollSection;

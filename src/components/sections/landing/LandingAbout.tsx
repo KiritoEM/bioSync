@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const LandingAbout = (): JSX.Element => {
   const { t } = useTranslation();
   return (
-    <section className="landing__about">
+    <section className="landing__about" id="about">
       <div className="about-header">
         <h2>{t("about.title")}</h2>
       </div>

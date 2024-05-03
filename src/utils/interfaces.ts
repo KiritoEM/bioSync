@@ -5,7 +5,7 @@ interface Ititle {
 }
 
 interface InavList {
-  scrollSection?: string;
+  sectionId?: string;
   key?: string;
 }
 

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const LandingFeatures = (): JSX.Element => {
   const { t } = useTranslation();
   return (
-    <section className="landing-features">
+    <section className="landing-features" id="features">
       <div className="row gy-5 gy-md-2">
         <div className="col-md-6">
           <div className="features-content">
