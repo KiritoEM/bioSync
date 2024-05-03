@@ -26,6 +26,23 @@ const enTranslation = {
       text: "Recommandation with Artificial Intelligence for product bio",
     },
   },
+  features: {
+    title: "Discover our features",
+    verification: {
+      subtitle: "Artificial intelligence verification",
+      text: "Add your product to our app and we will check if it is bio with our Artificial Intelligence",
+    },
+    recommandation: {
+      subtitle: "System recommandation",
+      text: "Our Intelligence Artificial will recommand you product or components bio",
+    },
+  },
+  community: {
+    title: "Join the community",
+    suscribe: "Subscribe to the newsletter",
+    placeholder: "Enter your email",
+    button: "Suscribe",
+  },
 };
 
 export default enTranslation;

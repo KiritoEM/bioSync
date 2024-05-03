@@ -10,7 +10,7 @@ const LandingFeatures = (): JSX.Element => {
         <div className="col-md-6">
           <div className="features-content">
             <div className="title">
-              <h2>Discover our features</h2>
+              <h2>{t("features.title")}</h2>
             </div>
             <div className="features-points">
               {featuresCardData.map((item, index) => (
