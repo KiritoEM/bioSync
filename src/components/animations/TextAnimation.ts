@@ -52,8 +52,8 @@ const TextAnimation = () => {
           .from(
             splitText.chars,
             {
-              duration: 0.2,
               autoAlpha: 0,
+              duration: 0.2,
               scale: 4,
               force3D: true,
               stagger: 0.01,
@@ -112,4 +112,4 @@ const TextAnimation = () => {
   return { divRef };
 };
 
-export default TextAnimation ;
+export default TextAnimation;

@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import scrollSection from "@/utils/scroll";
 
 const LandingNavbar = (): JSX.Element => {
-  const { menuToogle, openMenu } = useNav();
+  const { menuToogle, openMenu, changeNav } = useNav();
   const { optState, toogleOpt, lang, selectLangue, closeOpt, changelangue } =
     useTrans();
   const { t } = useTranslation();
@@ -24,9 +24,10 @@ const LandingNavbar = (): JSX.Element => {
               {navList.map((item, index) => (
                 <li
                   key={index}
-                  onClick={() =>
-                    scrollSection(item.sectionId ? item.sectionId : "")
-                  }
+                  onClick={() => {
+                    scrollSection(item.sectionId ? item.sectionId : "");
+                    changeNav(false);
+                  }}
                 >
                   {t(`${item.key}`)}
                 </li>
@@ -45,6 +46,7 @@ const LandingNavbar = (): JSX.Element => {
                         selectLangue({ code: lang.code, lang: lang.lang });
                         changelangue(lang.code);
                         closeOpt();
+                        changeNav(false);
                       }}
                       key={index}
                     >

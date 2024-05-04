@@ -19,7 +19,7 @@
         margin-top: 16vh;
         gap: 4vh;
         position: relative;
-        z-index: 100;
+        z-index: 500;
 
         @include screen(medium) {
             gap: 2rem;
@@ -37,6 +37,11 @@
             color: $light;
             text-align: center;
             width: 600px;
+            opacity: 0;
+            animation-name: fadeIn;
+            animation-duration: 0.2s;
+            animation-delay: 0.2s;
+            animation-fill-mode: forwards;
 
             @include screen(medium) {
                 font-size: 40px;
@@ -118,5 +123,15 @@
                 object-fit: contain;
             }
         }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

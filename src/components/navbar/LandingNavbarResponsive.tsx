@@ -5,7 +5,8 @@ import scrollSection from "@/utils/scroll";
 import { useTranslation } from "react-i18next";
 
 const LandingNavbarResponsive = (): JSX.Element => {
-  const { openMenu } = useNav();
+  /*  */
+  const { openMenu, changeNav } = useNav();
   const { t } = useTranslation();
   const { optState, toogleOpt, lang, selectLangue, closeOpt, changelangue } =
     useTrans();
@@ -20,7 +21,10 @@ const LandingNavbarResponsive = (): JSX.Element => {
         {navList.map((item, index) => (
           <li
             key={index}
-            onClick={() => scrollSection(item.sectionId ? item.sectionId : "")}
+            onClick={() => {
+              scrollSection(item.sectionId ? item.sectionId : "");
+              changeNav(false);
+            }}
           >
             {t(`${item.key}`)}
           </li>
@@ -39,6 +43,7 @@ const LandingNavbarResponsive = (): JSX.Element => {
                   selectLangue({ code: lang.code, lang: lang.lang });
                   changelangue(lang.code);
                   closeOpt();
+                  changeNav(false)
                 }}
                 key={index}
               >

@@ -19,12 +19,18 @@ export const NavProvider: React.FC<IAuthProvider> = ({
     setOpenOverlay(!openOverlay);
   };
 
+  const changeNav = (state: boolean) => {
+    setOpenMenu(state);
+    setOpenOverlay(false)
+  };
+
   return (
     <NavContext.Provider
       value={{
         openMenu,
         openOverlay,
         menuToogle,
+        changeNav,
       }}
     >
       {children}

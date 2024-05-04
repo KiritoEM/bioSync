@@ -12,12 +12,7 @@ const LandingHero = (): JSX.Element => {
     <section className="landing__hero">
       <div className="hero-container">
         <div className="title" ref={divRef}>
-          <h1
-            key={t("hero.title")}
-            dangerouslySetInnerHTML={{
-              __html: t("hero.title"),
-            }}
-          />
+          <h1 key={t("hero.title")}>{t("hero.title")}</h1>
         </div>
         <p>{t("hero.text")}</p>
         <div className="buttons">

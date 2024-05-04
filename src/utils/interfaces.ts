@@ -58,12 +58,14 @@ interface INavContext {
   openMenu: boolean;
   openOverlay: boolean;
   menuToogle: () => void;
+  changeNav: (state : boolean) => void;
 }
 
 interface IDefaultNavContext {
   openMenu: false;
   openOverlay: false;
   menuToogle: () => null;
+  changeNav: (state : boolean) => null;
 }
 
 interface ITranslationProvider {
