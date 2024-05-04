@@ -6,7 +6,7 @@ const enTranslation = {
     button: "Get Started",
   },
   hero: {
-    title: "Join the Green Revolution <br/> with BioSync",
+    title: "Join the Green Revolution  with BioSync",
     text: "Check if your product is ecologic and bio with our Artificial Intelligence, we facility your checking",
     button1: "Get Started",
     button2: "Learn more",

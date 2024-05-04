@@ -36,13 +36,16 @@
             font-weight: 700;
             color: $light;
             text-align: center;
+            width: 600px;
 
             @include screen(medium) {
                 font-size: 40px;
+                width: 100%;
             }
 
             @include screen(small) {
                 font-size: 31px;
+                width: 100%;
             }
         }
 
