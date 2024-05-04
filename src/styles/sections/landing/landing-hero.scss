@@ -18,6 +18,8 @@
         align-items: center;
         margin-top: 16vh;
         gap: 4vh;
+        position: relative;
+        z-index: 100;
 
         @include screen(medium) {
             gap: 2rem;
@@ -93,6 +95,7 @@
         left: 0;
         width: 100%;
         margin-top: -5vh;
+        z-index: 50;
 
         @include screen(medium) {
             margin-top: -1rem;

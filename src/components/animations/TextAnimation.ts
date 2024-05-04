@@ -1,22 +1,30 @@
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import SplitType from "split-type";
+import { useTranslation } from "react-i18next";
 
 const TextAnimation = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const [splitText, setSplitText] = useState<SplitType | null>(null);
   const [splitTextTimeline, setSplitTextTimeline] =
     useState<gsap.core.Timeline | null>(null);
+  const { t } = useTranslation();
 
   const initializeAnimation = () => {
+    // @ts-ignore
+    const titleElement = divRef.current.querySelector("h1");
     if (divRef.current) {
       // @ts-ignore
-      const splitTextInstance = new SplitType(divRef.current, {
+      const splitTextInstance = new SplitType(
         // @ts-ignore
-        type: "words",
-      });
+        titleElement,
+        {
+          // @ts-ignore
+          type: "words",
+        }
+      );
       const timeline = gsap.timeline();
-      gsap.set(divRef.current, { perspective: 400 });
+      gsap.set(titleElement, { perspective: 400 });
 
       setSplitText(splitTextInstance);
       setSplitTextTimeline(timeline);
@@ -95,13 +103,13 @@ const TextAnimation = () => {
     return () => {
       kill();
     };
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     handleCharsWordsLines();
-  }, [splitText]);
+  }, [t, splitText]);
 
   return { divRef };
 };
 
-export default TextAnimation;
+export { TextAnimation };

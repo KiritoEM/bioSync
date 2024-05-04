@@ -1,15 +1,19 @@
-import TextAnimation from "@/components/animations/TextAnimation";
+import { TextAnimation } from "@/components/animations/TextAnimation";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const LandingHero = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { divRef } = TextAnimation();
+
+  useEffect(() => {}, [i18n.language]);
 
   return (
     <section className="landing__hero">
       <div className="hero-container">
         <div className="title" ref={divRef}>
           <h1
+            key={t("hero.title")}
             dangerouslySetInnerHTML={{
               __html: t("hero.title"),
             }}
