@@ -112,4 +112,4 @@ const TextAnimation = () => {
   return { divRef };
 };
 
-export { TextAnimation };
+export default TextAnimation ;

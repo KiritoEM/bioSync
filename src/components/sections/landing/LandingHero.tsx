@@ -1,4 +1,4 @@
-import { TextAnimation } from "@/components/animations/TextAnimation";
+import TextAnimation from "@/components/animations/TextAnimation";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
